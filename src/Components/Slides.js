@@ -1,13 +1,18 @@
 import React from 'react';
-import {Container,Box} from '@material-ui/core';
-import { red, blue, green} from '@material-ui/core/colors';
-import Image from 'material-ui-image';
+import {Container,Box, makeStyles} from '@material-ui/core';
 import CardSimple from './CardSimple'
 
+const useStyles = makeStyles ({
+    root: {
+        marginTop:-100
+    },
+
+});
 
 const Slides = (props) => {
+    const  classes  = useStyles();
     return (
-        <Container maxWidth="md">
+        <Container maxWidth="md" className={classes.root}>
             <CardSimple src={'img/slide1.jpg'} height={500} />
         </Container>
     )
